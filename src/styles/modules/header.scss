@@ -57,7 +57,60 @@
     }
 }
 
+.sidebar {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
 
+    &__contant {
+        width: 152px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__logo {
+        width: 64px;
+        height: 68px;
+        margin-bottom: 80px;
+    }
+    &__link {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: $font-main;
+        color: #282C37;
+        margin-bottom: 45px;
+        &_margin {
+            margin-bottom: 116px;
+        }
+    }
+    &__btn_close {
+       width: 24px;
+       height: 24px;
+       position: absolute;
+       top: 24px;
+       left: 28px;
+       cursor: pointer;
+    }
+    &__icons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &_show {
+        display: flex;
+    }
+}
 @media (max-width: 991px) {
     .header__icons{
         justify-content: space-between;
