@@ -45,6 +45,9 @@
         top: 20%;
         z-index: -1;
     }
+    &__img-arrows {
+        display: none;
+    }
     &__btn_width {
         width: 264px;
     }
@@ -128,6 +131,7 @@
     .decision__img-polygons {
         top: 5%; 
     }
+   
     .decision__links {
         margin-top: 0;
         padding: 0 30px;
@@ -179,6 +183,10 @@
     }
     .decision__links {
         margin-top: 30px;
+    }
+    .decision__img-arrows {
+        display: block;
+        margin: 58px auto 70px;  
     }
 }
 @media (max-width: 576px){

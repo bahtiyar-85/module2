@@ -24,10 +24,11 @@ block content
                             p.decision__text.col-8 На основе анализа данных с алгоритмами реализации
                             +addButton('green', btnTitle, false, "decision__btn_width")
                     .col-10.col-sm-8.col-md-5.col-lg-4.col-xl-5.d-flex.align-items-center.decision__img
-                        img(src="../../images/images/cube.png").w-100
+                        img(src="../../images/images/cube.png").w-100    
                 img(src="../../images/images/up-arrow.png").decision__img-up
                 img(src="../../images/images/middle-arrow.png").decision__img-middle
                 img(src="../../images/images/polygons.png").decision__img-polygons
+                img(src="../../images/icons/arrows.svg").decision__img-arrows
             .decision__links.w-100
                 .row.justify-content-evenly
                     .col-12.col-md-6.col-lg-5
@@ -38,7 +39,7 @@ block content
                         +addLink("#", "Как избежать проблем на старте нового бизнеса?")
                     .col-12.col-md-6.col-lg-4
                         +addLink("#", "Как не попасть в 'черную дыру' затрат на продвижение?")
-    section.services.w-100
+    section#services.services.w-100
         .container
             .services__title.w-100
                 h1.services__title-text Услуги
@@ -46,21 +47,21 @@ block content
                 img(src="../../images/images/arrow-down.png", alt="arrow").services__title-img-arrow
             
             .row.services__items
-                .col-12.col-sm-6.col-lg-4
-                    .services__item.services__img-report_height
-                        img(src="../../images/icons/report.svg", alt="report")
+                .col-sl-12.col-md-6.col-lg-4
+                    a(href="#").services__item.services__img-report_height
+                        img(src="../../images/icons/report.svg", alt="report").services__item-img
                         p.services__item-text Разрабатываем маркетинг-план: дорожная карта достижения целей 
-                .col-12.col-sm-6.col-lg-8
-                    .services__item.services__img-idea_height
-                        img(src="../../images/icons/idea.svg", alt="idea")
+                .col-sl-12.col-md-6.col-lg-8
+                    a(href="#").services__item.services__img-idea_height.services__img-idea_justify
+                        img(src="../../images/icons/idea.svg", alt="idea").services__item-img
                         p.services__item-text Повышаем эффективность продвижения: аудит существующей модели
-                .col-12.col-sm-6.col-lg-4.item_up
-                    .services__item.services__img-search_height
-                        img(src="../../images/icons/search.svg", alt="search")
+                .col-sl-12.col-md-6.col-lg-4.item_up
+                    a(href="#").services__item.services__img-search_height
+                        img(src="../../images/icons/search.svg", alt="search").services__item-img
                         p.services__item-text Находим скрытую прибыль: анализ модели ценообразования 
-                .col-12.col-sm-6.col-lg-4.item_up
-                    .services__item.services__img-startup_height
-                        img(src="../../images/icons/startup.svg", alt="startup")
+                .col-sl-12.col-md-6.col-lg-4.item_up
+                    a(href="#").services__item.services__img-startup_height
+                        img(src="../../images/icons/startup.svg", alt="startup").services__item-img.services__item-img_startup
                         p.services__item-text Запускаем новый проект: start-up маркетинг
 
 

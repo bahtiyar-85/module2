@@ -29,17 +29,10 @@
         font-family: $font-main;
         color: #282C37;
         cursor: pointer;
-
-        &:hover {
-            color: #282C37;
-            text-decoration: underline;
-        }
-
-        // &:active {
-        //     font-weight: bold;
-        // }
     }
-
+    &__list-item:hover {
+        color: #282C37;
+    }
     &__icons {
         display: flex;
         justify-content: flex-end;
@@ -74,7 +67,7 @@
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 992px){
     .header__list {
         display: none;
     }
