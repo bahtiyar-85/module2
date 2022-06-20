@@ -1,1 +1,6 @@
-@import "./modules/header.scss"
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&family=Roboto&display=swap');
+
+@import "./modules/general-styles.scss";
+@import "./modules/header.scss";
+@import "./modules/decision.scss";
+@import "./modules/services.scss";

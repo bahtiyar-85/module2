@@ -7,6 +7,7 @@ const TerserWebpackPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack')
 
+
 const isDev = process.env.NODE__ENV === 'development';
 const isProd = !isDev;
 

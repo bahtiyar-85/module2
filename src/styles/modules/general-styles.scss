@@ -1,0 +1,52 @@
+$font-main: 'Lato', sans-serif;
+$font-title: 'Montserrat', sans-serif;
+$font-sub: 'Roboto', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: #282C37;
+}
+
+.button {
+    height: 48px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: $font-title;
+    border-radius: 8px;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    position: relative;
+    
+    &_green {
+        text-align: center;
+        background: #47CF34;
+        transition: .2s;
+        &:hover {
+            background: #30B01E;
+            transition: .2s;
+        }
+    }
+
+    &_blue {
+        background: #287EE7;
+        transition: .2s;
+        &:hover {
+            background: #4B9AFB;
+            transition: .2s;
+        }
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 25px;
+        top: 14px;
+    }
+}
