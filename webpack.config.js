@@ -42,6 +42,10 @@ module.exports = {
             filename: "trening.html",
             template: './src/pug/pages/trening.pug',
         }),
+        new HTMLWebpackPlugin({
+            filename: "marketing.html",
+            template: './src/pug/pages/marketing.pug',
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: "styles.css",

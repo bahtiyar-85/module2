@@ -3,6 +3,11 @@ mixin addButton(style, text, boolIcon, classWidth)
         - if(boolIcon)
             img(class="button__icon", src="../../images/icons/arrow-icon.svg", alt="arrow")
 
+mixin addButtonLink(link, text, boolIcon, classWidth)
+    a(class= 'button button_blue button__link '+classWidth, href= link) #{text}
+        - if(boolIcon)
+            img(class="button__icon", src="../../images/icons/arrow-icon.svg", alt="arrow")
+
 mixin breadcrumbs(list)
     .breadcrumb
         ul.breadcrumb__list
@@ -17,7 +22,7 @@ mixin bisnessTrening(trening)
     h2.trening__title= trening.title 
     p.trening__whom= trening.listeners 
     p.trening__purpose= trening.purpose 
-    
+
 mixin listWithIcon(list)
     ul.list-icon
         for i in list

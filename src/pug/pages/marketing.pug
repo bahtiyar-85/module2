@@ -1,0 +1,12 @@
+extends ../layout/layout.pug
+include ../modules/mixins.pug
+
+block variables
+    - var pageTitle = "Тренинги"
+    - var btnTitle = "подробнее"
+    - const crumb = ["Главная","/","Тренинги","/","Бизнес-тренинг «Маркетинг – технология роста»"]
+
+block content
+    .container
+        +breadcrumbs(crumb)
+        +brokenCube 

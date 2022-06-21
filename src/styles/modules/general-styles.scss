@@ -49,4 +49,13 @@ $font-sub: 'Roboto', sans-serif;
         right: 25px;
         top: 14px;
     }
+    &__link {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        padding-top: 14px;
+        &:hover {
+            color: #fff;
+        }
+    } 
 }
