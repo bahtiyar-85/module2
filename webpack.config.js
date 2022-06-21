@@ -7,7 +7,6 @@ const TerserWebpackPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack')
 
-
 const isDev = process.env.NODE__ENV === 'development';
 const isProd = !isDev;
 
@@ -36,7 +35,12 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
+            filename: "index.html",
             template: './src/pug/pages/main.pug',
+        }),
+        new HTMLWebpackPlugin({
+            filename: "second.html",
+            template: './src/pug/pages/second.pug',
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
@@ -55,7 +59,7 @@ module.exports = {
                 
             ]
         }),
-        new webpack.HotModuleReplacementPlugin(),
+         new webpack.HotModuleReplacementPlugin(),
     ],
     module: {
         rules: [
@@ -65,7 +69,7 @@ module.exports = {
             // },
             {
                 test: /\.(scss|css)$/,
-                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
             },
             {
                 test: /\.pug$/,
