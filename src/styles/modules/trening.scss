@@ -1,0 +1,145 @@
+
+
+.broken-cube {
+    width: 43.7%;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: 20%;
+    z-index: -1;
+}
+@media (max-width:991px) {
+    .broken-cube {
+        display: none;
+    }
+}
+
+
+.breadcrumb {
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 16px;
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        padding-left: 16px;
+        position: relative;  
+    }
+    &__item {
+        font-family: $font-sub;
+        font-size: 14px;
+        line-height: 16px;
+        color: #9FA7B0;
+        font-weight: 400;  
+        margin-right: 16px;
+    }
+    &__item:last-child {
+        color:  #282C37;
+    }
+    &__img {
+        position: absolute;
+        bottom: -120px;
+        left: 0; 
+        z-index: -1;   
+        width: 100px;
+    }
+}
+@media (max-width: 576px){
+    .breadcrumb {
+        padding-top: 40px;
+    }
+
+}
+
+.trening {
+    margin: 0 18px 40px;
+    box-shadow: 4px 4px 20px rgba(40, 44, 55, 0.2);
+    border-radius: 20px;
+    padding: 38px;
+    background-color: #fff;
+    
+    &__title{
+        font-family: $font-title;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+        margin-bottom: 30px;
+    }
+    &__whom {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 5px;
+        font-style: normal;
+        font-weight: 400;
+    }
+    &__purpose {
+        font-size: 18px;
+        line-height: 22px;
+        font-style: normal;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+    &__btn_width {
+        width: 229px;
+    }
+   
+}
+@media (min-width: 768px){
+    .trening_margin-bottom {
+        margin-bottom: 98px;
+    }
+}
+@media (max-width: 991px){
+    .trening__title {
+        margin-bottom: 15px;
+    }
+    .trening__purpose {
+        margin-bottom: 15px;
+    }
+    .trening__btn {
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width: 576px){
+    .trening {
+        padding: 20px 4px;
+    }
+    .trening__title {
+        font-size: 24px;
+        line-height: 26px;
+    }
+}
+
+
+.list-icon {
+    list-style-type: none;
+    margin-top: 15px;
+    &__item {
+        font-size: 17px;
+        line-height: 20px;
+        position: relative;
+        margin-bottom: 16px;
+        padding-left: 38px;
+
+        &-img {
+            width: 26px;
+            height: 26px;
+            position: absolute;
+            left: -30px;
+            top: 0;
+        }
+    }
+}
+@media (max-width: 991px){
+    .list-icon {
+        margin-bottom: 25px;
+    }
+}
+@media (max-width: 576px){
+    .list-icon__item{
+        padding-left: 8px;
+    }
+}

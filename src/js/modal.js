@@ -39,7 +39,7 @@ const checkFormValid = () => {
 const addFocusListener = () => {
     const links = getInputs()
     links.forEach(input => {
-        input.addEventListener('focus', function(e){
+        input?.addEventListener('focus', function(e){
             if(e.target.classList.contains('input_error')){
                 e.target.classList.remove('input_error')
                 e.target.nextElementSibling.textContent = ""
@@ -76,9 +76,9 @@ const handleSubmit = (e) => {
 }
 
 export const modalInit = () => {
-    form.addEventListener('submit', (e) => handleSubmit(e))
-    modalOpenBtn.addEventListener('click', () => showHideToggle('modal'))
-    modalClodeBtn.addEventListener('click', () => {
+    form?.addEventListener('submit', (e) => handleSubmit(e))
+    modalOpenBtn?.addEventListener('click', () => showHideToggle('modal'))
+    modalClodeBtn?.addEventListener('click', () => {
         showHideToggle('modal')
         cleanForm()
     })

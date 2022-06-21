@@ -39,8 +39,8 @@ module.exports = {
             template: './src/pug/pages/main.pug',
         }),
         new HTMLWebpackPlugin({
-            filename: "second.html",
-            template: './src/pug/pages/second.pug',
+            filename: "trening.html",
+            template: './src/pug/pages/trening.pug',
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
@@ -75,14 +75,14 @@ module.exports = {
                 test: /\.pug$/,
                 loader: '@webdiscus/pug-loader',
             },
-            // {
-            //     test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-            //     type: 'asset/resource',
-            // },
-            // {
-            //     test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-            //     type: 'asset/inline',
-            // },
+            {
+                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+                type: 'asset/resource',
+            },
+            {
+                test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+                type: 'asset/inline',
+            },
         ]
     },
     optimization: optimization()

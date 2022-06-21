@@ -1,0 +1,80 @@
+extends ../layout/layout.pug
+include ../modules/mixins.pug
+
+block variables
+    - var pageTitle = "Тренинги"
+    - var btnTitle = "подробнее"
+    - const crumb = ["Главная","/","Тренинги"]
+    -
+           const list = { 
+            trening: {
+                title: "Бизнес-тренинг «Маркетинг – технология роста»",
+                listeners: "Для кого: руководители компаний, маркетологи, продавцы",
+                purpose : "Цели бизнес-тренинга:",
+            },
+            list: 
+            [
+                "Определение маркетинга как технологии роста",
+                "Организация маркетинга как сквозного бизнес-процесса",
+                "Получение практических навыков применения технологии маркетинга"
+            ]
+            }
+    -
+          const list2 = { 
+            trening: {
+                title: "Тренинг с длинным названием в 3 текстовой строчки",
+                listeners: "Для кого: руководители компаний, маркетологи, продавцы",
+                purpose : "Цели бизнес-тренинга:",
+            },
+            list: 
+            [
+                "Определение маркетинга как технологии роста",
+                "Организация маркетинга как сквозного бизнес-процесса",
+                "Получение практических навыков применения технологии маркетинга",
+                "Получение практических навыков применения технологии маркетинга"
+            ]
+            }
+    -
+        const list3 = { 
+            trening: {
+                title: "Короткое название",
+                listeners: "Для кого: руководители компаний, маркетологи, продавцы",
+                purpose : "Цели бизнес-тренинга:",
+            },
+            list: 
+            [
+                "Определение маркетинга как технологии роста",
+                "Организация маркетинга как сквозного бизнес-процесса",
+                "Получение практических навыков применения технологии маркетинга"
+            ]
+            }
+
+block content
+    .container
+        +breadcrumbs(crumb)
+        +brokenCube 
+
+        .row.trening
+            .col-12.col-lg-6 
+                +bisnessTrening(list.trening) 
+            .col-12.col-lg-6
+                +listWithIcon(list.list)
+            .col-12.trening__btn
+                +addButton('blue', btnTitle, true, "trening__btn_width")
+        
+        .row.trening
+            .col-12.col-lg-6 
+                +bisnessTrening(list2.trening) 
+            .col-12.col-lg-6
+                +listWithIcon(list2.list)
+            .col-12.trening__btn
+                +addButton('blue', btnTitle, true, "trening__btn_width")
+
+        .row.trening.trening_margin-bottom
+            .col-12.col-lg-6 
+                +bisnessTrening(list3.trening) 
+            .col-12.col-lg-6
+                +listWithIcon(list3.list)
+            .col-12.trening__btn
+                +addButton('blue', btnTitle, true, "trening__btn_width")
+       
