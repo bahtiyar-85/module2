@@ -23,7 +23,7 @@
     &__list {
         list-style-type: none;
         display: flex;
-        padding-left: 16px;
+        padding-left: 0;
         position: relative;  
     }
     &__item {
@@ -40,7 +40,7 @@
     &__img {
         position: absolute;
         bottom: -120px;
-        left: 0; 
+        left: -20px; 
         z-index: -1;   
         width: 100px;
     }
@@ -53,7 +53,7 @@
 }
 
 .trening {
-    margin: 0 18px 40px;
+    margin: 0 0 40px;
     box-shadow: 4px 4px 20px rgba(40, 44, 55, 0.2);
     border-radius: 20px;
     padding: 38px;
@@ -84,7 +84,13 @@
     &__btn_width {
         width: 229px;
     }
-   
+    &_font-size {
+        font-size: 44px;
+        line-height: 54px;
+    }
+    &_margin-top {
+        margin-top: -10px;
+    }
 }
 @media (min-width: 768px){
     .trening_margin-bottom {

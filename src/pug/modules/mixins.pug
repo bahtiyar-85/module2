@@ -23,9 +23,26 @@ mixin bisnessTrening(trening)
     p.trening__whom= trening.listeners 
     p.trening__purpose= trening.purpose 
 
+mixin bisnessTreningBig(trening)
+    h2.marketing-header__title= trening.title 
+    p.marketing-header__whom= trening.listeners 
+    p.marketing-header__purpose= trening.purpose 
+
 mixin listWithIcon(list)
     ul.list-icon
         for i in list
             li.list-icon__item= i
                 img(src="../../images/icons/logo-cube.svg", alt="logo").list-icon__item-img
+
+mixin listWithMarker(object)
+    h5.topic__title= object.title
+    ul.topic__list
+        for i in object.list 
+            li.topic__item-marker= i
+
+mixin listSimple(object)
+    h5.topic__title= object.title
+    ul.topic__list
+        for i in object.list 
+            li.topic__item= object.list
             
