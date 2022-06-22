@@ -25,6 +25,7 @@
         display: flex;
         padding-left: 0;
         position: relative;  
+        flex-wrap: wrap;
     }
     &__item {
         font-family: $font-sub;
@@ -43,6 +44,11 @@
         left: -20px; 
         z-index: -1;   
         width: 100px;
+    }
+}
+@media (max-width: 767px){
+    .breadcrumb__img {
+        display: none;
     }
 }
 @media (max-width: 576px){

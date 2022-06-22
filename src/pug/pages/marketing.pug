@@ -125,7 +125,7 @@ block content
         +listWithMarker(benefits)
         +listWithMarker(format)
         .consult
-            .row.justify-content-center
+            .row.justify-content-center.h-100
                 .col-12.col-md-8.col-lg-6
                     form.consult__form
                         input#name2.input(type='text', name='name', placeholder='Ваше имя')
@@ -133,6 +133,7 @@ block content
                         input#email2.input(type='email', name='email', placeholder='Email')
                         label.input__message(for='email2')
                         +addButton('green', btnForm, false, "consult__btn_width")
+                        p.order__success-message Ваша заявка успешно отправлена!
             img(src="../../images/images/polygon2.png", alt="poly").consult__img1
             img(src="../../images/images/polygon2.png", alt="poly").consult__img2
             img(src="../../images/images/polygon2.png", alt="poly").consult__img3
