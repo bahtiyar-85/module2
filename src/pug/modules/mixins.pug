@@ -1,22 +1,22 @@
 mixin addButton(style, text, boolIcon, classWidth)
     button(class= 'button button_' + style + ' ' + classWidth) #{text}
         - if(boolIcon)
-            img(class="button__icon", src="../../images/icons/arrow-icon.svg", alt="arrow")
+            img(class="button__icon", src=require("/src/images/icons/arrow-icon.svg"), alt="arrow")
 
 mixin addButtonLink(link, text, boolIcon, classWidth)
     a(class= 'button button_blue button__link '+classWidth, href= link) #{text}
         - if(boolIcon)
-            img(class="button__icon", src="../../images/icons/arrow-icon.svg", alt="arrow")
+            img(class="button__icon", src=require("/src/images/icons/arrow-icon.svg"), alt="arrow")
 
 mixin breadcrumbs(list)
     .breadcrumb
         ul.breadcrumb__list
-            img(src="../../images/images/polygon2.png", alt="polygon").breadcrumb__img
+            img(src=require("/src/images/images/polygon2.png"), alt="polygon").breadcrumb__img
             for i in list
                 li.breadcrumb__item= i
 
 mixin brokenCube 
-    img(src="../../images/images/bg-cube.png", alt="cube").broken-cube
+    img(src=require("/src/images/images/bg-cube.png"), alt="cube").broken-cube
 
 mixin bisnessTrening(trening)
     h2.trening__title= trening.title 
@@ -32,7 +32,7 @@ mixin listWithIcon(list)
     ul.list-icon
         for i in list
             li.list-icon__item= i
-                img(src="../../images/icons/logo-cube.svg", alt="logo").list-icon__item-img
+                img(src=require("/src/images/icons/logo-cube.svg"), alt="logo").list-icon__item-img
 
 mixin listWithMarker(object)
     h5.topic__title= object.title
@@ -57,6 +57,6 @@ mixin modalConsult
                     label.input__message(for='email2')
                     +addButton('green', btnForm, false, "consult__btn_width")
                     p.order__success-message
-        img(src="../../images/images/polygon2.png", alt="poly").consult__img1
-        img(src="../../images/images/polygon2.png", alt="poly").consult__img2
-        img(src="../../images/images/polygon2.png", alt="poly").consult__img3
+        img(src=require("/src/images/images/polygon2.png"), alt="poly").consult__img1
+        img(src=require("/src/images/images/polygon2.png"), alt="poly").consult__img2
+        img(src=require("/src/images/images/polygon2.png"), alt="poly").consult__img3

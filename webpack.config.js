@@ -57,14 +57,9 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: "./src/images/images",
-                    to: "./images/images"
+                    from: "./src/images",
+                    to: "./images"
                 },
-                {
-                    from: "./src/images/icons",
-                    to:"./images/icons"
-                },
-                
             ]
         }),
          new webpack.HotModuleReplacementPlugin(),
