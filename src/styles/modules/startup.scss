@@ -1,0 +1,40 @@
+.startup {
+    &__service {
+
+        &-title {
+            font-family: $font-title;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 37px;
+            margin: 56px 0 36px;
+        }
+        &-contant {
+            margin-left: 20px;
+            margin-bottom: 80px;
+        }
+        &-text {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 22px;
+        }
+        &-list {
+            margin-top: 36px;
+            margin-left: 18px;
+        }
+        &-link {
+            text-decoration: none;
+        }
+    }
+}
+@media (max-width: 575px){
+    .startup__service-title {
+        text-align: center;
+    }
+    .startup__service-contant {
+        margin-left: 6px;
+        margin-bottom: 0;
+    }
+    .startup__service-list {
+        margin-left: 6px;
+    }
+}

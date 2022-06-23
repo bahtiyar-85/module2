@@ -46,6 +46,10 @@ module.exports = {
             filename: "marketing.html",
             template: './src/pug/pages/marketing.pug',
         }),
+        new HTMLWebpackPlugin({
+            filename: "startup.html",
+            template: './src/pug/pages/startup.pug',
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: "styles.css",
@@ -67,17 +71,16 @@ module.exports = {
     ],
     module: {
         rules: [
-            // {
-            //     test: /\.css$/,
-            //     use: [MiniCssExtractPlugin.loader, 'css-loader']
-            // },
             {
                 test: /\.(scss|css)$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
             },
             {
                 test: /\.pug$/,
-                loader: '@webdiscus/pug-loader',
+                loader: 'pug-loader',
+                options: {
+                    pretty: true
+                }
             },
             {
                 test: /\.(?:ico|gif|png|jpg|jpeg)$/i,

@@ -44,7 +44,7 @@ mixin listSimple(object)
     h5.topic__title= object.title
     ul.topic__list
         for i in object.list 
-            li.topic__item= object.list
+            li.topic__item= i
             
 mixin modalConsult
     .consult
