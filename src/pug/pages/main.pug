@@ -1,4 +1,5 @@
 extends ../layout/layout.pug
+include ../modules/mixins.pug
 
 block variables
     - var pageTitle = "Главная"
@@ -19,7 +20,6 @@ block content
                             h1.decision__title Создаем решениe
                             p.decision__subtitle Для роста бизнеса
                             p.decision__text.col-8 На основе анализа данных с алгоритмами реализации
-                            include ../modules/mixins.pug
                             +addButton('green', btnTitle, false, "decision__btn_width")
                     .col-10.col-sm-8.col-md-5.col-lg-4.col-xl-5.d-flex.align-items-center.decision__img
                         img(src="../../images/images/cube.png").w-100    
@@ -71,7 +71,6 @@ block content
                 label.input__message(for='email') 
                 textarea#desc.input.input_multy(type='text', name='desc', placeholder='Пожалуйста опишите вашу проблему')
                 label.input__message(for='desc')
-                include ../modules/mixins.pug
                 +addButton('green', btnSend, false, "order__btn_width")
                 p.order__success 
         img(src="../../images/icons/cross.svg").modal__btn-close

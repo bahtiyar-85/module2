@@ -5,7 +5,7 @@ const modalOpenBtn = document.querySelector('.decision__btn_width')
 const modalClodeBtn = document.querySelector('.modal__btn-close')
 const form = document.querySelector('.order')
 
-const checkValid = (value) => {
+export const checkValid = (value) => {
     if (value === "") {
         return {
             valid: false,
