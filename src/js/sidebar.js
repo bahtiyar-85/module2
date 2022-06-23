@@ -4,7 +4,6 @@ const sidebarCloseBtn = document.querySelector(".sidebar__btn_close")
 
 export const showHideToggle = (className) => {
     const link = document.querySelector(`.${className}`)
-    console.log(link);
     link.classList.toggle(`${className}_show`);
 }
 
