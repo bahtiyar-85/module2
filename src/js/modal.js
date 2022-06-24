@@ -1,10 +1,6 @@
 import { showHideToggle } from "./sidebar"
 
 
-const modalOpenBtn = document.querySelector('.decision__btn_width')
-const modalClodeBtn = document.querySelector('.modal__btn-close')
-const form = document.querySelector('.order')
-
 export const checkValid = (value) => {
     if (value === "") {
         return {
@@ -22,8 +18,7 @@ const getInputs = () => {
     return [name, email, description]
 }
 
-const checkFormValid = () => {
-    const links = getInputs()
+export const checkFormValid = (links) => {
     let bool = true
     links.forEach(input => {
         const result = checkValid(input.value)
@@ -36,8 +31,7 @@ const checkFormValid = () => {
     return bool
 }
 
-const addFocusListener = () => {
-    const links = getInputs()
+export const addFocusListener = (links) => {
     links.forEach(input => {
         input?.addEventListener('focus', function(e){
             if(e.target.classList.contains('input_error')){
@@ -47,40 +41,44 @@ const addFocusListener = () => {
         } )
     })
 }
-const cleanForm = () => {
-    const links =  getInputs()
-    const submitBtn = document.querySelector('.order__btn_width')
+export const cleanForm = (links, submitBtn, message) => {
     submitBtn.classList.remove("order__btn_send")
     submitBtn.textContent = "отправить"
-    document.querySelector('.order__success').textContent = ""
+    message.textContent = ""
     links.forEach(input => {
         input.value = ""
         input.nextElementSibling.textContent = ""
         input.classList.remove('input_error')
     })
 }
-const handleSubmit = (e) => {
+export const handleSubmit = (e, inputs, button, message) => {
     e.preventDefault()
-    const submitBtn = document.querySelector('.order__btn_width')
-    submitBtn.classList.add("order__btn_send")
-    submitBtn.textContent = "идет отправка..."
+    button.classList.add("order__btn_send")
+    button.textContent = "идет отправка..."
     setTimeout(function () {
-        if(checkFormValid()){
-            document.querySelector('.order__success').textContent = "Ваша заявка успешно отправлена!"
+        if(checkFormValid(inputs)){
+            message.textContent = "Ваша заявка успешно отправлена!"
         } else {
-            submitBtn.classList.remove("order__btn_send")
-            submitBtn.textContent = "отправить"
+           button.classList.remove("order__btn_send")
+           button.textContent = "отправить"
         }
     }, 1000);
     
 }
 
 export const modalInit = () => {
-    form?.addEventListener('submit', (e) => handleSubmit(e))
+    const modalOpenBtn = document.querySelector('.decision__btn_width')
+    const modalClodeBtn = document.querySelector('.modal__btn-close')
+    const form = document.querySelector('.order')
+    const links =  getInputs()
+    const submitBtn = document.querySelector('.order__btn_width')
+    const showingMessage = document.querySelector('.order__success')
+
+    form?.addEventListener('submit', (e) => handleSubmit(e, links, submitBtn, showingMessage))
     modalOpenBtn?.addEventListener('click', () => showHideToggle('modal'))
     modalClodeBtn?.addEventListener('click', () => {
         showHideToggle('modal')
-        cleanForm()
+        cleanForm(links, submitBtn, showingMessage)
     })
-    addFocusListener();
+    addFocusListener(links);
 }

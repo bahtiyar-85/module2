@@ -11,71 +11,71 @@ mixin addLink(urlLink, text)
         img(src=require("/src/images/icons/logo-cube.svg"), alt="logo").link__img
         span.link__text= text
 block content
-    section.decision.w-100
-        .container
-            .decision__contant.w-100
-                .row.decision__contant-items
-                    .col-12.col-sm-10.col-md-7.col-lg-8.col-xl-7
-                        .decision__items
-                            h1.decision__title Создаем решениe
-                            p.decision__subtitle Для роста бизнеса
-                            p.decision__text.col-8 На основе анализа данных с алгоритмами реализации
-                            +addButton('green', btnTitle, false, "decision__btn_width")
-                    .col-10.col-sm-8.col-md-5.col-lg-4.col-xl-5.d-flex.align-items-center.decision__img
-                        img(src=require("/src/images/images/cube.png")).w-100    
-                img(src=src=require("/src/images/images/up-arrow.png")).decision__img-up
-                img(src=src=require("/src/images/images/middle-arrow.png")).decision__img-middle
-                img(src=src=require("/src/images/images/polygons.png")).decision__img-polygons
-                img(src=src=require("/src/images/icons/arrows.svg")).decision__img-arrows
-            .decision__links.w-100
-                .row.justify-content-evenly
-                    .col-12.col-md-6.col-lg-5
-                        +addLink("#", "Как найти точки роста и определить цели?")
-                    .col-12.col-md-6.col-lg-4
-                        +addLink("#", "Как увеличить прибыль, управляя ценами?")
-                    .col-12.col-md-6.col-lg-5
-                        +addLink("#", "Как избежать проблем на старте нового бизнеса?")
-                    .col-12.col-md-6.col-lg-4
-                        +addLink("#", "Как не попасть в 'черную дыру' затрат на продвижение?")
-    section#services.services.w-100
-        .container
-            .services__title.w-100
-                h1.services__title-text Услуги
-                img(src=require("/src/images/images/polygon2.png"), alt="polygon").services__title-img-poly
-                img(src=require("/src/images/images/arrow-down.png"), alt="arrow").services__title-img-arrow
-            
-            .row.services__items
-                .col-sl-12.col-md-6.col-lg-4
-                    a(href="startup.html").services__item.services__img-report_height
-                        img(src=require("/src/images/icons/report.svg"), alt="report").services__item-img
-                        p.services__item-text Разрабатываем маркетинг-план: дорожная карта достижения целей 
-                .col-sl-12.col-md-6.col-lg-8
-                    a(href="startup.html").services__item.services__img-idea_height.services__img-idea_justify
-                        img(src=require("/src/images/icons/idea.svg"), alt="idea").services__item-img
-                        p.services__item-text Повышаем эффективность продвижения: аудит существующей модели
-                .col-sl-12.col-md-6.col-lg-4.item_up
-                    a(href="startup.html").services__item.services__img-search_height
-                        img(src=require("/src/images/icons/search.svg"), alt="search").services__item-img
-                        p.services__item-text Находим скрытую прибыль: анализ модели ценообразования 
-                .col-sl-12.col-md-6.col-lg-4.item_up
-                    a(href="startup.html").services__item.services__img-startup_height
-                        img(src=require("/src/images/icons/startup.svg"), alt="startup").services__item-img.services__item-img_startup
-                        p.services__item-text Запускаем новый проект: start-up маркетинг
-    .modal 
-        .modal__contant 
-            form.order
-                h3.order__title Оставьте заявку
-                input#name.input(type='text', name='name', placeholder='Ваше имя')
-                label.input__message(for='name') 
-                input#email.input(type='email', name='email', placeholder='Email')
-                label.input__message(for='email') 
-                textarea#desc.input.input_multy(type='text', name='desc', placeholder='Пожалуйста опишите вашу проблему')
-                label.input__message(for='desc')
-                +addButton('green', btnSend, false, "order__btn_width")
-                p.order__success 
-        img(src=require("/src/images/icons/cross.svg")).modal__btn-close
+    .container
+        section.decision.w-100
+                .decision__contant.w-100
+                    .row.decision__contant-items
+                        .col-12.col-sm-10.col-md-7.col-lg-8.col-xl-7
+                            .decision__items
+                                h1.decision__title Создаем решениe
+                                p.decision__subtitle Для роста бизнеса
+                                p.decision__text.col-8 На основе анализа данных с алгоритмами реализации
+                                +addButton('green', btnTitle, false, "decision__btn_width")
+                        .col-10.col-sm-8.col-md-5.col-lg-4.col-xl-5.d-flex.align-items-center.decision__img
+                            img(src=require("/src/images/images/cube.png")).w-100    
+                    img(src=src=require("/src/images/images/up-arrow.png")).decision__img-up
+                    img(src=src=require("/src/images/images/middle-arrow.png")).decision__img-middle
+                    img(src=src=require("/src/images/images/polygons.png")).decision__img-polygons
+                    img(src=src=require("/src/images/icons/arrows.svg")).decision__img-arrows
+                .decision__links.w-100
+                    .row.justify-content-evenly
+                        .col-12.col-md-6.col-lg-5
+                            +addLink("#", "Как найти точки роста и определить цели?")
+                        .col-12.col-md-6.col-lg-4
+                            +addLink("#", "Как увеличить прибыль, управляя ценами?")
+                        .col-12.col-md-6.col-lg-5
+                            +addLink("#", "Как избежать проблем на старте нового бизнеса?")
+                        .col-12.col-md-6.col-lg-4
+                            +addLink("#", "Как не попасть в 'черную дыру' затрат на продвижение?")
+        
+        section#services.services.w-100
+                .services__title.w-100
+                    h1.services__title-text Услуги
+                    img(src=require("/src/images/images/polygon2.png"), alt="polygon").services__title-img-poly
+                    img(src=require("/src/images/images/arrow-down.png"), alt="arrow").services__title-img-arrow
+                
+                .row.services__items
+                    .col-sl-12.col-md-6.col-lg-4
+                        a(href="startup.html").services__item.services__img-report_height
+                            img(src=require("/src/images/icons/report.svg"), alt="report").services__item-img
+                            p.services__item-text Разрабатываем маркетинг-план: дорожная карта достижения целей 
+                    .col-sl-12.col-md-6.col-lg-8
+                        a(href="startup.html").services__item.services__img-idea_height.services__img-idea_justify
+                            img(src=require("/src/images/icons/idea.svg"), alt="idea").services__item-img
+                            p.services__item-text Повышаем эффективность продвижения: аудит существующей модели
+                    .col-sl-12.col-md-6.col-lg-4.item_up
+                        a(href="startup.html").services__item.services__img-search_height
+                            img(src=require("/src/images/icons/search.svg"), alt="search").services__item-img
+                            p.services__item-text Находим скрытую прибыль: анализ модели ценообразования 
+                    .col-sl-12.col-md-6.col-lg-4.item_up
+                        a(href="startup.html").services__item.services__img-startup_height
+                            img(src=require("/src/images/icons/startup.svg"), alt="startup").services__item-img.services__item-img_startup
+                            p.services__item-text Запускаем новый проект: start-up маркетинг
+        .modal 
+            .modal__contant 
+                form.order
+                    h3.order__title Оставьте заявку
+                    input#name.input(type='text', name='name', placeholder='Ваше имя')
+                    label.input__message(for='name') 
+                    input#email.input(type='email', name='email', placeholder='Email')
+                    label.input__message(for='email') 
+                    textarea#desc.input.input_multy(type='text', name='desc', placeholder='Пожалуйста опишите вашу проблему')
+                    label.input__message(for='desc')
+                    +addButton('green', btnSend, false, "order__btn_width")
+                    p.order__success 
+            img(src=require("/src/images/icons/cross.svg")).modal__btn-close
 
-   
+    
 
 
 
