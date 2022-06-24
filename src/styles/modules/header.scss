@@ -33,6 +33,7 @@
     &__list-item:hover {
         color: #282C37;
     }
+   
     &__icons {
         display: flex;
         justify-content: flex-end;
@@ -110,6 +111,9 @@
     &_show {
         display: flex;
     }
+}
+.header__list-item_bold {
+    font-weight: 700;
 }
 @media (max-width: 991px) {
     .header__icons{
