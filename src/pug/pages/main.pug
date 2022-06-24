@@ -61,19 +61,20 @@ block content
                         a(href="startup.html").services__item.services__img-startup_height
                             img(src=require("/src/images/icons/startup.svg"), alt="startup").services__item-img.services__item-img_startup
                             p.services__item-text Запускаем новый проект: start-up маркетинг
-        .modal 
-            .modal__contant 
-                form.order
-                    h3.order__title Оставьте заявку
-                    input#name.input(type='text', name='name', placeholder='Ваше имя')
-                    label.input__message(for='name') 
-                    input#email.input(type='email', name='email', placeholder='Email')
-                    label.input__message(for='email') 
-                    textarea#desc.input.input_multy(type='text', name='desc', placeholder='Пожалуйста опишите вашу проблему')
-                    label.input__message(for='desc')
-                    +addButton('green', btnSend, false, "order__btn_width")
-                    p.order__success 
-            img(src=require("/src/images/icons/cross.svg")).modal__btn-close
+        .modal
+            .modal__form 
+                .modal__contant 
+                    form.order
+                        h3.order__title Оставьте заявку
+                        input#name.input(type='text', name='name', placeholder='Ваше имя')
+                        label.input__message(for='name') 
+                        input#email.input(type='email', name='email', placeholder='Email')
+                        label.input__message(for='email') 
+                        textarea#desc.input.input_multy(type='text', name='desc', placeholder='Пожалуйста опишите вашу проблему')
+                        label.input__message(for='desc')
+                        +addButton('green', btnSend, false, "order__btn_width")
+                        p.order__success 
+                img(src=require("/src/images/icons/cross.svg")).modal__btn-close
 
     
 

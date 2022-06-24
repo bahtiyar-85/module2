@@ -70,6 +70,7 @@ export const modalInit = () => {
     const modalOpenBtn = document.querySelector('.decision__btn_width')
     const modalClodeBtn = document.querySelector('.modal__btn-close')
     const form = document.querySelector('.order')
+    const modal = document.querySelector(".modal")
     const links =  getInputs()
     const submitBtn = document.querySelector('.order__btn_width')
     const showingMessage = document.querySelector('.order__success')
@@ -81,4 +82,9 @@ export const modalInit = () => {
         cleanForm(links, submitBtn, showingMessage)
     })
     addFocusListener(links);
+    modal.addEventListener("click", function(e) {
+        if (e.target === modal) {
+            showHideToggle('modal')
+        }
+    })
 }
